@@ -1,0 +1,29 @@
+pipeline{
+   agent any
+   stages{
+        stage('Checkout'){
+          steps{
+            git branch:main,
+                 url:
+               }
+             stage('Compilation'){
+                  steps{
+                      bat 'py -m py_compile sum.py test.py'
+                      }
+            }
+            stage('Testing){
+               steps{
+               bat 'py test.py'
+                 }
+                  }
+              stage('Testing){
+               steps{
+               bat 'py test.py'
+               }
+                stage('Packaging'){
+                  steps{
+                   bat 'tar -a -c -f rani.zip sum.py'
+                 }
+           }
+        }
+}
