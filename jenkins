@@ -5,7 +5,7 @@ pipeline {
         stage('Checkout') {
             steps {
                 git branch: 'main',
-                url: 'https://github.com/USERNAME/PythonCICD.git'
+                url: 'https://github.com/RANI6412/pythonrepoi.git'
             }
         }
 
